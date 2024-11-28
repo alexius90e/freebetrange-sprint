@@ -1,0 +1,288 @@
+.first-screen {
+  background-color: #5fc5ff;
+
+  @include laptop {
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    gap: 72px;
+
+    @include desktop {
+      gap: 50px;
+    }
+  }
+
+  &__founder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 624px;
+    box-sizing: border-box;
+
+    @include desktop {
+      flex: 0 0 456px;
+    }
+
+    @include laptop {
+      position: absolute;
+      z-index: 1;
+      top: -21px;
+      left: 312px;
+      right: 0;
+      flex: 0 1 auto;
+      overflow: hidden;
+    }
+
+    @include tablet {
+      left: 200px;
+    }
+
+    @include mobile {
+      top: -10px;
+      left: 153px;
+    }
+
+    @include mobilesm {
+      left: 94px;
+    }
+
+    &-figure {
+      position: absolute;
+      top: -30px;
+      right: 0;
+      z-index: 1;
+
+      @include desktop {
+        top: 50%;
+        transform: translate3d(0, calc(-50% + 36px), 0);
+      }
+
+      @include laptop {
+        position: static;
+        top: auto;
+        right: auto;
+        transform: none;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 441px;
+        height: auto;
+
+        @include desktop {
+          width: 313px;
+        }
+
+        @include laptop {
+          max-width: 599px;
+          width: 599px;
+        }
+
+        @include mobile {
+          width: 281px;
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      padding-left: 46px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      color: #fff;
+
+      @include desktop {
+        padding: 36px 0 0;
+      }
+
+      @include laptop {
+        position: absolute;
+        left: 172px;
+        bottom: 92px;
+        z-index: 10;
+        font-size: 26px;
+      }
+
+      @include mobile {
+        left: 81px;
+        bottom: 44px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__event {
+    padding: 137px 0 58px;
+
+    @include desktop {
+      padding: 98px 0 41px;
+    }
+
+    @include laptop {
+      position: relative;
+      z-index: 10;
+      padding: 308px 0 122px;
+    }
+
+    @include mobile {
+      padding: 163px 0 58px;
+    }
+
+    &-name {
+      margin: 0 0 5px;
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 103%;
+      text-transform: uppercase;
+      color: #2f2f2f;
+
+      @include desktop {
+        margin: 0 0 4px;
+        font-size: 30px;
+      }
+
+      @include laptop {
+        font-size: 42px;
+      }
+
+      @include mobile {
+        margin: 0 0 1px;
+        font-size: 20px;
+      }
+    }
+
+    &-date {
+      margin: 0 0 30px;
+      font-weight: 600;
+      font-size: 66px;
+      line-height: 103%;
+      text-transform: uppercase;
+      color: #2f2f2f;
+
+      @include desktop {
+        margin: 0 0 26px;
+        font-size: 46px;
+      }
+
+      @include laptop {
+        margin: 0 0 96px;
+        font-size: 64px;
+      }
+
+      @include mobile {
+        margin: 0 0 45px;
+        font-size: 30px;
+      }
+    }
+
+    &-title {
+      margin: 0 0 104px;
+      font-weight: 700;
+      font-size: 76px;
+      line-height: 105%;
+      text-transform: uppercase;
+      color: #fff;
+
+      @include desktop {
+        margin: 0 0 74px;
+        font-size: 54px;
+      }
+
+      @include laptop {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 245px;
+        font-size: 76px;
+        line-height: 116%;
+      }
+
+      @include tabletsm {
+        font-size: 60px;
+      }
+
+      @include mobile {
+        margin: 0 0 114px;
+        font-size: 36px;
+      }
+
+      & > span {
+        @include laptop {
+          font-size: 108px;
+        }
+
+        @include tabletsm {
+          font-size: 76px;
+        }
+
+        @include mobile {
+          font-size: 51px;
+        }
+      }
+    }
+
+    &-getin {
+      &-link {
+        position: relative;
+        display: inline-block;
+        padding: 26px 74px 29px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 44px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 36px;
+        overflow: hidden;
+
+        @include desktop {
+          font-size: 30px;
+        }
+
+        @include laptop {
+          width: 100%;
+          font-size: 42px;
+          text-align: center;
+        }
+
+        @include mobile {
+          padding: 12px 34px;
+          font-size: 20px;
+          border-radius: 16px;
+        }
+
+        &:hover {
+          border-color: #dd49b3;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          z-index: 0;
+          background-image: linear-gradient(270deg, #dd49b3 0%, #c849dd 100%);
+          opacity: 0;
+        }
+
+        &:hover::before {
+          opacity: 1;
+          transition-property: opacity;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+        }
+
+        & span {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
