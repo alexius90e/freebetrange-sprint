@@ -178,7 +178,7 @@
         font-size: 64px;
       }
 
-      @include mobile {
+      @include tablet {
         font-size: 30px;
       }
 
@@ -196,6 +196,18 @@
         filter: brightness(0.1);
 
         @include desktop {
+          width: 26px;
+          height: 26px;
+          background-size: 26px;
+        }
+
+        @include laptop {
+          width: 56px;
+          height: 56px;
+          background-size: 56px;
+        }
+
+        @include tablet {
           width: 26px;
           height: 26px;
           background-size: 26px;

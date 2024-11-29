@@ -1,0 +1,265 @@
+.schedule {
+  background: #2f2f2f;
+  border-bottom: 1px solid #545454;
+
+  @include laptop {
+    border: none;
+  }
+
+  &__content {
+    position: relative;
+    padding: 153px 0 98px;
+
+    @include desktop {
+      padding: 108px 0 69px;
+    }
+
+    @include laptop {
+      padding: 255px 0 0;
+    }
+
+    @include mobile {
+      padding: 120px 0 0;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 2;
+    max-width: 959px;
+
+    @include desktop {
+      max-width: 682px;
+    }
+
+    @include laptop {
+      max-width: none;
+    }
+
+    &-step {
+      margin: 0 0 90px;
+
+      @include desktop {
+        margin-bottom: 60px;
+      }
+
+      @include laptop {
+        margin-bottom: 52px;
+      }
+
+      @include mobile {
+        margin-bottom: 23px;
+      }
+
+      &-date {
+        margin: 0 0 20px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 100%;
+        color: #fff;
+
+        @include desktop {
+          margin-bottom: 20px;
+          font-size: 30px;
+        }
+
+        @include laptop {
+          margin-bottom: 15px;
+        }
+
+        @include mobile {
+          margin-bottom: 7px;
+          font-size: 14px;
+        }
+      }
+
+      &-title {
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 120%;
+        color: #fff;
+
+        @include desktop {
+          font-size: 42px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-begin {
+      margin-top: 180px;
+
+      @include desktop {
+        margin-top: 138px;
+      }
+
+      @include laptop {
+        margin-top: 165px;
+      }
+
+      @include mobile {
+        margin-top: 78px;
+      }
+
+      &-button {
+        position: relative;
+        display: inline-block;
+        max-width: 832px;
+        width: 100%;
+        padding: 31px 60px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 44px;
+        color: #fff;
+        text-align: center;
+        border-radius: 36px;
+        overflow: hidden;
+        transition-property: background-image;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+
+        @include desktop {
+          padding: 22px 36px;
+          font-size: 30px;
+          border-radius: 26px;
+        }
+
+        @include laptop {
+          padding: 16px 36px;
+          font-size: 38px;
+          border-radius: 16px;
+        }
+
+        @include mobile {
+          padding: 8px 34px;
+          font-size: 18px;
+          border-radius: 8px;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          transition-property: opacity;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.4s;
+          cursor: pointer;
+        }
+
+        &::before {
+          z-index: 0;
+          background-image: linear-gradient(90deg, #09a6ff 0%, #6a36ff 60%, #ff2ff7 100%);
+        }
+
+        &::after {
+          z-index: 1;
+          background-image: linear-gradient(90deg, #09a6ff 0%, #6a36ff 20%, #ff2ff7 100%);
+          opacity: 0;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+
+        & span {
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  &__founder {
+    position: absolute;
+    right: 65px;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @include desktoplg {
+      right: -20px;
+    }
+
+    @include laptop {
+      bottom: 76px;
+    }
+
+    @include mobile {
+      bottom: 36px;
+    }
+
+    &-figure {
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 675px;
+        height: auto;
+
+        @include desktop {
+          width: 480px;
+        }
+
+        @include laptop {
+          width: 487px;
+        }
+
+        @include mobile {
+          width: 240px;
+        }
+      }
+    }
+
+    &-info {
+      position: absolute;
+      left: 520px;
+      bottom: 731px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      color: #fff;
+
+      @include desktop {
+        left: auto;
+        right: 24px;
+        bottom: 36px;
+        max-width: 160px;
+      }
+
+      @include laptop {
+        font-size: 26px;
+        max-width: 160px;
+      }
+
+      @include mobile {
+        right: 18px;
+        bottom: 18px;
+        font-size: 12px;
+        max-width: 104px;
+      }
+
+      & > * {
+        display: block;
+        width: max-content;
+
+        @include desktoplg {
+          width: auto;
+        }
+      }
+    }
+  }
+}
