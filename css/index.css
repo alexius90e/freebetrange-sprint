@@ -633,3 +633,135 @@ img {
   position: relative;
   z-index: 1;
 }
+
+.why-we__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+  max-width: 1365px;
+  margin: 0 auto;
+  padding: 209px 0 309px;
+  background: url(../../assets/question.svg) top -100px center/576px no-repeat;
+}
+@media (max-width: 1400px) {
+  .why-we__content {
+    padding: 228px 0 310px;
+    background-size: 506px;
+    background-position: top -50px center;
+  }
+}
+@media (max-width: 992px) {
+  .why-we__content {
+    padding: 104px 0 278px;
+    background-size: 360px;
+    background-position: top -21px center;
+  }
+}
+@media (max-width: 576px) {
+  .why-we__content {
+    justify-content: center;
+    gap: 15px;
+    padding: 49px 0 129px;
+    background-size: 170px;
+    background-position: top -10px center;
+  }
+}
+.why-we__left, .why-we__right {
+  display: flex;
+  flex-direction: column;
+  gap: 69px;
+}
+@media (max-width: 1400px) {
+  .why-we__left, .why-we__right {
+    gap: 65px;
+  }
+}
+@media (max-width: 992px) {
+  .why-we__left, .why-we__right {
+    gap: 82px;
+  }
+}
+@media (max-width: 576px) {
+  .why-we__left, .why-we__right {
+    gap: 32px;
+  }
+}
+.why-we__left {
+  align-items: flex-end;
+}
+@media (max-width: 992px) {
+  .why-we__left {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 992px) {
+  .why-we__left > *:first-child {
+    padding-left: 21px;
+  }
+}
+.why-we__right {
+  align-items: flex-end;
+}
+@media (max-width: 992px) {
+  .why-we__right {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .why-we__right {
+    padding: 26px;
+  }
+}
+@media (max-width: 992px) {
+  .why-we__right > *:last-child {
+    padding-right: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .why-we__right > *:last-child {
+    padding-right: 14px;
+  }
+}
+.why-we__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+}
+.why-we__item-title {
+  font-weight: 600;
+  font-size: 76px;
+  line-height: 103%;
+  color: #2f2f2f;
+}
+@media (max-width: 1400px) {
+  .why-we__item-title {
+    font-size: 64px;
+  }
+}
+@media (max-width: 992px) {
+  .why-we__item-title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 576px) {
+  .why-we__item-title {
+    font-size: 22px;
+  }
+}
+.why-we__item-text {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 103%;
+  color: #2f2f2f;
+}
+@media (max-width: 1400px) {
+  .why-we__item-text {
+    font-size: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .why-we__item-text {
+    font-size: 18px;
+  }
+}
