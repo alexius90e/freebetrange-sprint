@@ -1,5 +1,4 @@
 .footer {
-  display: none;
   padding: 176px 0 97px;
   background-color: #2f2f2f;
 
@@ -15,11 +14,21 @@
     padding: 86px 0 24px;
   }
 
+  & .container {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: column-reverse;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 27px 24px;
     padding-bottom: 46px;
 
     @include desktop {
@@ -30,7 +39,163 @@
       padding: 16px 0 0;
     }
 
+    @include mobile {
+      gap: 13px 16px;
+    }
+
     &-language {
+      position: relative;
+      flex: 0 0 auto;
+
+      @include laptop {
+        order: 0;
+      }
+
+      &-current {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10%;
+        margin-top: -10%;
+        font-weight: 500;
+        font-size: 25px;
+        color: #c0c0c0;
+        cursor: pointer;
+
+        @include desktop {
+          gap: 6px;
+          font-size: 18px;
+        }
+
+        @include laptop {
+          gap: 10px;
+          font-size: 24px;
+        }
+
+        @include mobile {
+          gap: 4px;
+          font-size: 10px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 28px;
+          aspect-ratio: 1 / 1;
+          background: url(../assets/globe.svg) center / 28px no-repeat;
+
+          @include desktop {
+            width: 19px;
+            background-size: 19px;
+          }
+
+          @include laptop {
+            width: 34px;
+            background-size: 34px;
+          }
+
+          @include mobile {
+            width: 12px;
+            background-size: 12px;
+          }
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 16px;
+          aspect-ratio: 1 / 1;
+          background: url(../assets/shevron.svg) center / 16px no-repeat;
+          transition: transform ease-in-out 0.2s;
+
+          @include desktop {
+            width: 10px;
+            background-size: 10px;
+          }
+
+          @include laptop {
+            width: 13px;
+            background-size: 13px;
+          }
+
+          @include mobile {
+            width: 8px;
+            background-size: 8px;
+          }
+        }
+      }
+
+      &:hover &-current::after {
+        transform: rotate(180deg);
+      }
+
+      &-list {
+        position: absolute;
+        bottom: 120%;
+        left: -12px;
+        display: none;
+        padding: 8px;
+        border-radius: 6px;
+        background-color: #272727;
+
+        @include mobile {
+          padding: 3px;
+          left: -6px;
+        }
+
+        &-link {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 500;
+          font-size: 25px;
+          color: #c0c0c0;
+          padding: 4px;
+
+          @include desktop {
+            gap: 6px;
+            font-size: 18px;
+          }
+
+          @include laptop {
+            gap: 10px;
+            font-size: 24px;
+          }
+
+          @include mobile {
+            gap: 4px;
+            padding: 3px;
+            font-size: 10px;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            width: 28px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/globe.svg) center / 28px no-repeat;
+
+            @include desktop {
+              width: 19px;
+              background-size: 19px;
+            }
+
+            @include laptop {
+              width: 34px;
+              background-size: 34px;
+            }
+
+            @include mobile {
+              width: 12px;
+              background-size: 12px;
+            }
+          }
+        }
+      }
+
+      &:hover &-list {
+        display: block;
+      }
     }
 
     &-payment {
@@ -45,6 +210,7 @@
 
       @include laptop {
         gap: 17px;
+        order: 3;
       }
 
       @include mobile {
@@ -81,11 +247,23 @@
       }
 
       @include laptop {
-        gap: 28px;
+        gap: 24px;
       }
 
       @include mobile {
-        gap: 16px;
+        gap: 14px;
+      }
+    }
+
+    &-contacts {
+      @include laptop {
+        order: 2;
+      }
+    }
+
+    &-docs {
+      @include laptop {
+        order: 1;
       }
     }
 
@@ -93,17 +271,22 @@
       font-weight: 500;
       font-size: 25px;
       color: #c0c0c0;
+      transition: color ease-in-out 0.2s;
 
       @include desktop {
         font-size: 18px;
       }
 
       @include laptop {
-        font-size: 24px;
+        font-size: 22px;
       }
 
       @include mobile {
-        font-size: 11px;
+        font-size: 10px;
+      }
+
+      &:hover {
+        color: #dd49b3;
       }
     }
   }
