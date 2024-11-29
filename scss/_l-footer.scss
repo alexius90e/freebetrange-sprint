@@ -1,2 +1,285 @@
 .footer {
+  display: none;
+  padding: 176px 0 97px;
+  background-color: #2f2f2f;
+
+  @include desktop {
+    padding: 124px 0 78px;
+  }
+
+  @include laptop {
+    padding: 182px 0 52px;
+  }
+
+  @include mobile {
+    padding: 86px 0 24px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 46px;
+
+    @include desktop {
+      padding-bottom: 31px;
+    }
+
+    @include laptop {
+      padding: 16px 0 0;
+    }
+
+    &-language {
+    }
+
+    &-payment {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      gap: 12px;
+
+      @include desktop {
+        gap: 8px;
+      }
+
+      @include laptop {
+        gap: 17px;
+      }
+
+      @include mobile {
+        gap: 8px;
+      }
+
+      &-item {
+        display: block;
+        max-width: 100px;
+        height: 40px;
+        width: auto;
+
+        @include desktop {
+          height: 26px;
+        }
+
+        @include laptop {
+          height: 46px;
+        }
+
+        @include mobile {
+          height: 22px;
+        }
+      }
+    }
+
+    &-contacts,
+    &-docs {
+      display: flex;
+      gap: 46px;
+
+      @include desktop {
+        gap: 38px;
+      }
+
+      @include laptop {
+        gap: 28px;
+      }
+
+      @include mobile {
+        gap: 16px;
+      }
+    }
+
+    &-link {
+      font-weight: 500;
+      font-size: 25px;
+      color: #c0c0c0;
+
+      @include desktop {
+        font-size: 18px;
+      }
+
+      @include laptop {
+        font-size: 24px;
+      }
+
+      @include mobile {
+        font-size: 11px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 105px;
+    padding-top: 46px;
+    border-top: 1px solid #c0c0c0;
+
+    @include desktop {
+      gap: 61px;
+      padding-top: 31px;
+    }
+
+    @include laptop {
+      padding: 0 0 16px;
+      border-top: none;
+      border-bottom: 1px solid #c0c0c0;
+    }
+
+    @include mobile {
+      gap: 39px;
+    }
+
+    &-copyright {
+      &-logo {
+        &-link {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          @include desktop {
+            gap: 5px;
+          }
+
+          @include laptop {
+            gap: 10px;
+          }
+
+          @include mobile {
+            gap: 5px;
+          }
+
+          &-icon {
+            display: block;
+            max-width: 100%;
+            width: 32px;
+            height: auto;
+            transition: filter ease-in-out 0.2s;
+            filter: brightness(0) saturate(100%) invert(67%) sepia(99%) saturate(5%)
+              hue-rotate(59deg) brightness(93%) contrast(100%);
+
+            @include desktop {
+              width: 22px;
+            }
+
+            @include laptop {
+              width: 34px;
+            }
+
+            @include mobile {
+              width: 16px;
+            }
+          }
+
+          &-text {
+            display: inline-block;
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 140%;
+            color: #c0c0c0;
+
+            @include desktop {
+              font-size: 19px;
+            }
+
+            @include laptop {
+              font-size: 32px;
+            }
+
+            @include tabletsm {
+              font-size: 32px;
+            }
+
+            @include mobile {
+              font-size: 15px;
+            }
+          }
+
+          &:hover &-icon {
+            filter: brightness(0) saturate(100%) invert(43%) sepia(82%) saturate(956%)
+              hue-rotate(224deg) brightness(98%) contrast(90%);
+          }
+        }
+      }
+
+      &-text {
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 25px;
+        color: #c0c0c0;
+
+        @include desktop {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+
+        @include laptop {
+          margin-top: 7px;
+          font-weight: 400;
+          font-size: 24px;
+        }
+
+        @include mobile {
+          margin-top: 4px;
+          font-weight: 400;
+          font-size: 11px;
+        }
+      }
+    }
+
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+
+      @include desktop {
+        gap: 31px;
+      }
+
+      @include laptop {
+        gap: 40px;
+      }
+
+      @include mobile {
+        gap: 19px;
+      }
+
+      &-link {
+        display: block;
+        width: 96px;
+        aspect-ratio: 1 / 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: filter ease-in-out 0.2s;
+        filter: grayscale(100%);
+        will-change: filter;
+
+        @include desktop {
+          width: 64px;
+        }
+
+        @include laptop {
+          width: 79px;
+        }
+
+        @include mobile {
+          width: 37px;
+        }
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+
+        &_yt {
+          background-image: url(../assets/youtube.svg);
+        }
+
+        &_dc {
+          background-image: url(../assets/discord.svg);
+        }
+      }
+    }
+  }
 }
