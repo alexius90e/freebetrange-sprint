@@ -1,0 +1,113 @@
+.lets-play {
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 111px;
+
+    @include desktoplg {
+      gap: 80px;
+    }
+
+    @include desktopsm {
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    @include mobile {
+      gap: 30px;
+    }
+  }
+
+  &__info {
+    flex: 0 5 auto;
+    margin-top: -16px;
+
+    &-title {
+      margin: 0 0 62px;
+      font-weight: 600;
+      font-size: 116px;
+      line-height: 110%;
+      color: #2f2f2f;
+
+      @include desktoplg {
+        margin-bottom: 46px;
+        font-size: 84px;
+      }
+
+      @include desktopsm {
+        margin-bottom: 62px;
+        font-size: 92px;
+      }
+
+      @include mobile {
+        margin-bottom: 32px;
+        font-size: 43px;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      gap: 58px;
+      font-size: 50px;
+      line-height: 130%;
+
+      @include desktoplg {
+        gap: 42px;
+        font-size: 36px;
+      }
+
+      @include laptop {
+        gap: 36px;
+        font-size: 38px;
+      }
+
+      @include mobile {
+        gap: 19px;
+        font-size: 18px;
+      }
+    }
+
+    &-promise {
+      flex: 0 0 305px;
+      font-weight: 800;
+      color: #dd49b3;
+
+      @include desktoplg {
+        flex: 0 0 221px;
+      }
+
+      @include mobile {
+        flex: 0 0 102px;
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      color: #2f2f2f;
+
+      &-date {
+        color: #dd49b3;
+      }
+    }
+  }
+
+  &__figure {
+    flex: 0 1 599px;
+
+    @include desktoplg {
+      flex: 0 0 434px;
+    }
+
+    @include desktopsm {
+      display: flex;
+      justify-content: center;
+      flex: 0 1 auto;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

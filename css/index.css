@@ -52,6 +52,7 @@ img {
 }
 @media (max-width: 576px) {
   .container {
+    max-width: 360px;
     padding: 0 20px;
   }
 }
@@ -709,7 +710,7 @@ img {
 }
 @media (max-width: 576px) {
   .why-we__right {
-    padding: 26px;
+    padding-top: 26px;
   }
 }
 @media (max-width: 992px) {
@@ -764,4 +765,121 @@ img {
   .why-we__item-text {
     font-size: 18px;
   }
+}
+
+.lets-play__content {
+  display: flex;
+  align-items: center;
+  gap: 111px;
+}
+@media (max-width: 1600px) {
+  .lets-play__content {
+    gap: 80px;
+  }
+}
+@media (max-width: 1120px) {
+  .lets-play__content {
+    flex-direction: column;
+    gap: 64px;
+  }
+}
+@media (max-width: 576px) {
+  .lets-play__content {
+    gap: 30px;
+  }
+}
+.lets-play__info {
+  flex: 0 5 auto;
+  margin-top: -16px;
+}
+.lets-play__info-title {
+  margin: 0 0 62px;
+  font-weight: 600;
+  font-size: 116px;
+  line-height: 110%;
+  color: #2f2f2f;
+}
+@media (max-width: 1600px) {
+  .lets-play__info-title {
+    margin-bottom: 46px;
+    font-size: 84px;
+  }
+}
+@media (max-width: 1120px) {
+  .lets-play__info-title {
+    margin-bottom: 62px;
+    font-size: 92px;
+  }
+}
+@media (max-width: 576px) {
+  .lets-play__info-title {
+    margin-bottom: 32px;
+    font-size: 43px;
+  }
+}
+.lets-play__info-bottom {
+  display: flex;
+  gap: 58px;
+  font-size: 50px;
+  line-height: 130%;
+}
+@media (max-width: 1600px) {
+  .lets-play__info-bottom {
+    gap: 42px;
+    font-size: 36px;
+  }
+}
+@media (max-width: 992px) {
+  .lets-play__info-bottom {
+    gap: 36px;
+    font-size: 38px;
+  }
+}
+@media (max-width: 576px) {
+  .lets-play__info-bottom {
+    gap: 19px;
+    font-size: 18px;
+  }
+}
+.lets-play__info-promise {
+  flex: 0 0 305px;
+  font-weight: 800;
+  color: #dd49b3;
+}
+@media (max-width: 1600px) {
+  .lets-play__info-promise {
+    flex: 0 0 221px;
+  }
+}
+@media (max-width: 576px) {
+  .lets-play__info-promise {
+    flex: 0 0 102px;
+  }
+}
+.lets-play__info-text {
+  font-weight: 600;
+  color: #2f2f2f;
+}
+.lets-play__info-text-date {
+  color: #dd49b3;
+}
+.lets-play__figure {
+  flex: 0 1 599px;
+}
+@media (max-width: 1600px) {
+  .lets-play__figure {
+    flex: 0 0 434px;
+  }
+}
+@media (max-width: 1120px) {
+  .lets-play__figure {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+  }
+}
+.lets-play__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

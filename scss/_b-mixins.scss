@@ -1,5 +1,17 @@
+@mixin desktoplg {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin desktopsm {
+  @media (max-width: 1120px) {
     @content;
   }
 }
