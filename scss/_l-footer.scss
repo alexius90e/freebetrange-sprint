@@ -296,7 +296,7 @@
     align-items: center;
     gap: 105px;
     padding-top: 46px;
-    border-top: 1px solid #c0c0c0;
+    border-top: 1px solid rgba($color: #c0c0c0, $alpha: 0.25);
 
     @include desktop {
       gap: 61px;
@@ -306,7 +306,7 @@
     @include laptop {
       padding: 0 0 16px;
       border-top: none;
-      border-bottom: 1px solid #c0c0c0;
+      border-top: 1px solid rgba($color: #c0c0c0, $alpha: 0.25);
     }
 
     @include mobile {

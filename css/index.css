@@ -645,7 +645,7 @@ img {
   align-items: center;
   gap: 105px;
   padding-top: 46px;
-  border-top: 1px solid #c0c0c0;
+  border-top: 1px solid rgba(192, 192, 192, 0.25);
 }
 @media (max-width: 1400px) {
   .footer__bottom {
@@ -657,7 +657,7 @@ img {
   .footer__bottom {
     padding: 0 0 16px;
     border-top: none;
-    border-bottom: 1px solid #c0c0c0;
+    border-top: 1px solid rgba(192, 192, 192, 0.25);
   }
 }
 @media (max-width: 576px) {
@@ -1037,6 +1037,11 @@ img {
 @media (max-width: 1600px) {
   .first-screen__event-title {
     margin: 0 0 74px;
+    font-size: 64px;
+  }
+}
+@media (max-width: 1400px) {
+  .first-screen__event-title {
     font-size: 54px;
   }
 }

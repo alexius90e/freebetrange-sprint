@@ -195,6 +195,10 @@
 
       @include desktoplg {
         margin: 0 0 74px;
+        font-size: 64px;
+      }
+
+      @include desktop {
         font-size: 54px;
       }
 
