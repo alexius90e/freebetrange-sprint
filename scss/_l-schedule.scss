@@ -190,7 +190,7 @@
     box-sizing: border-box;
 
     @include desktoplg {
-      right: -20px;
+      right: 0px;
     }
 
     @include laptop {
@@ -249,7 +249,7 @@
         right: 18px;
         bottom: 18px;
         font-size: 12px;
-        max-width: 104px;
+        max-width: 96px;
       }
 
       & > * {

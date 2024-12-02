@@ -657,7 +657,7 @@ img {
   .footer__bottom {
     padding: 0 0 16px;
     border-top: none;
-    border-top: 1px solid rgba(192, 192, 192, 0.25);
+    border-bottom: 1px solid rgba(192, 192, 192, 0.25);
   }
 }
 @media (max-width: 576px) {
@@ -1051,7 +1051,7 @@ img {
     flex-direction: column;
     margin: 0 0 245px;
     font-size: 76px;
-    line-height: 116%;
+    line-height: 110%;
   }
 }
 @media (max-width: 640px) {
@@ -1068,6 +1068,7 @@ img {
 @media (max-width: 992px) {
   .first-screen__event-title > span {
     font-size: 108px;
+    line-height: 90%;
   }
 }
 @media (max-width: 640px) {
@@ -1849,7 +1850,7 @@ img {
 }
 @media (max-width: 1600px) {
   .schedule__founder {
-    right: -20px;
+    right: 0px;
   }
 }
 @media (max-width: 992px) {
@@ -1913,7 +1914,7 @@ img {
     right: 18px;
     bottom: 18px;
     font-size: 12px;
-    max-width: 104px;
+    max-width: 96px;
   }
 }
 .schedule__founder-info > * {

@@ -207,7 +207,7 @@
         flex-direction: column;
         margin: 0 0 245px;
         font-size: 76px;
-        line-height: 116%;
+        line-height: 110%;
       }
 
       @include tabletsm {
@@ -222,6 +222,7 @@
       & > span {
         @include laptop {
           font-size: 108px;
+          line-height: 90%;
         }
 
         @include tabletsm {
